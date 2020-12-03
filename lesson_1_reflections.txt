@@ -1,0 +1,37 @@
+•	Comparing two files for differences:
+- Open the developer console
+- Navigate to the corresponding folder via cd
+- In Windows use command: fc <oldfile.js> <newfile.js>
+- In Mac/Linux use command: diff -u <oldfile.js> <newfile.js>
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+- Getting an overview of the complete progress
+- Being able to reset changes efficient
+
+- How often to commit?
+A good rule of thumb is to make one commit per logical change. 
+For example, if you fixed a typo, then fixed a bug in a separate part of the file, you should use one commit for each change since they are logically separate. 
+If you do this, each commit will have one purpose that can be easily understood. 
+Git allows you to write a short message explaining what was changed in each commit, and that message will be more useful if each commit has a single logical change.
+
+- What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+The main reason why it's beneficial to make a manual commit is that the user can distinguish when it does make sense to make a commit and when not, whereas an automatic 
+commit system can not determine a good timing for a commit. 
+
+- Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Because you might change features which affect multiple files or you apply changes which affect multiple files at once. 
+When you compare two commits you can observe the changelog for all this files at once.
+
+Cloning a Repository
+To clone a repository, run "git clone" followed by a space and the repository URL.
+
+
+Exiting git log
+To stop viewing git log output, press "q" (which stands for quit)
+
+Getting Colored Output
+To get colored diff output, run "git config --global color.ui auto"
+
+As a reminder, running "git log" will show a list of the recent commits with information about them, including commit IDs. 
+Running "git diff" followed by two commit IDs will compare the two versions of the code in those commits.
+> git clone https://github.com/udacity/asteroids.git
